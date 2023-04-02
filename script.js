@@ -61,32 +61,3 @@ if (currentTheme) {
     toggleSwitch.checked = true;
   }
 }
-
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData);
-
-  try {
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      form.reset();
-      window.location.href = "./thankyou.html";
-    } else {
-      alert("Error sending email");
-    }
-  } catch (error) {
-    console.error(error);
-    alert("Error sending email");
-  }
-});
