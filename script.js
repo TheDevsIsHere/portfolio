@@ -80,8 +80,8 @@ form.addEventListener("submit", async (event) => {
     });
 
     if (response.ok) {
-      alert("Email sent successfully");
       form.reset();
+      window.location.href = "./thankyou.html";
     } else {
       alert("Error sending email");
     }

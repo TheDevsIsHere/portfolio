@@ -15,8 +15,8 @@ module.exports = async (req, res) => {
 
   // Define email options
   const mailOptions = {
-    from: "asharibarain4@gmail.com",
-    to: "asharibarain4@gmail.com",
+    from: "asharibaliarain@gmail.com",
+    to: "asharibaliarain@gmail.com",
     subject: `New message from ${name} - ${subject}`,
     text: message,
   };
